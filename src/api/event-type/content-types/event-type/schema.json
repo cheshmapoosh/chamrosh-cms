@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "event_types",
+  "info": {
+    "singularName": "event-type",
+    "pluralName": "event-types",
+    "displayName": "Event Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "maxAppear": {
+      "type": "integer"
+    },
+    "default": {
+      "type": "boolean",
+      "default": false
+    },
+    "assetType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asset-type.asset-type",
+      "inversedBy": "eventTypes"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asset_transactions",
+  "info": {
+    "singularName": "asset-transaction",
+    "pluralName": "asset-transactions",
+    "displayName": "Asset Transaction",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "transactionAddress": {
+      "type": "string"
+    },
+    "ownerAddress": {
+      "type": "string"
+    },
+    "previousAssetTransaction": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asset-transaction.asset-transaction"
+    },
+    "asset": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::asset.asset"
+    },
+    "imageAddress": {
+      "type": "string"
+    },
+    "issuerAddress": {
+      "type": "string"
+    }
+  }
+}

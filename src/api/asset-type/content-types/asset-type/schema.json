@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "asset_types",
+  "info": {
+    "singularName": "asset-type",
+    "pluralName": "asset-types",
+    "displayName": "Asset Type",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "eventTypes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::event-type.event-type",
+      "mappedBy": "assetType"
+    },
+    "assets": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::asset.asset",
+      "mappedBy": "assetType"
+    }
+  }
+}

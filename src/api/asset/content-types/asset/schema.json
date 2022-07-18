@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "assets",
+  "info": {
+    "singularName": "asset",
+    "pluralName": "assets",
+    "displayName": "Asset",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "uniqueId": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "ownerAddress": {
+      "type": "string"
+    },
+    "transactionAddress": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "assetType": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::asset-type.asset-type",
+      "inversedBy": "assets"
+    },
+    "imageAddress": {
+      "type": "string"
+    },
+    "issuerAddress": {
+      "type": "string"
+    }
+  }
+}
