@@ -2,6 +2,7 @@ module.exports = [
   'strapi::errors',
   'strapi::security',
   'strapi::cors',
+  'global::allowAllCors',
   {
     name: 'strapi::poweredBy',
     config: {
