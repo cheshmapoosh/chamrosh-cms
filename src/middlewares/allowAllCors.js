@@ -2,11 +2,11 @@ const { defaultsDeep } = require("lodash/fp");
 
 const defaults = {
   origin: "*",
-  maxAge: 31536000,
+  maxAge: '31536000',
   credentials: true,
   expose: true,
-  allowMethods: ["GET", "POST", "PUT", "PATCH", "DELETE", "HEAD", "OPTIONS"],
-  headers: ["Content-Type", "Authorization", "Origin", "Accept"],
+  allowMethods: 'GET,POST,PUT,PATCH,DELETE,HEAD,OPTIONS',
+  allowHeaders: 'Content-Type,Authorization,Origin,Accept',
   keepHeadersOnError: false,
 };
 
